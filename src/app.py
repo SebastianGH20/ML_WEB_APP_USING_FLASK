@@ -31,10 +31,7 @@ def home():
         except ValueError as e:
             # Manejar el caso de valores no válidos
             prediction = "Por favor, introduce valores válidos en todos los campos."
-    print("Hola")
-    print(prediction)
-    print("Input data for prediction:", input_data)
-    print("Model prediction:", prediction)
+    
 
     return render_template("index.html", prediction=prediction)
 
