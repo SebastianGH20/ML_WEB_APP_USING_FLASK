@@ -22,5 +22,10 @@ seaborn>=0.12.2
 sqlalchemy>=1.4.37
 sympy>=1.10.1
 xgboost
-flask
-gunicorn
+gunicornFlask==2.0.3
+Flask==2.0.3
+scikit-learn==1.0.2
+waitress==2.0.0
+
+
+
