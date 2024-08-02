@@ -1,0 +1,8 @@
+version: 1
+services:
+  - type: web
+    name: MyFlaskApp
+    env: python
+    plan: free
+    buildCommand: "pip install -r C:\Users\Usuario\OneDrive\Escritorio\4GeeksAcademy\ML_WEB_APP_USING_FLASK\ML_WEB_APP_USING_FLASK\src\requirements.txt"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:10000"
