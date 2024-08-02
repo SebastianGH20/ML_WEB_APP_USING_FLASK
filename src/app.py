@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Cargar el modelo
-model = pickle.load(open('C:/Users/Usuario/OneDrive/Escritorio/4GeeksAcademy/ML_WEB_APP_USING_FLASK/ML_WEB_APP_USING_FLASK/models/ranfor_classifier_nestimators-60_42.sav', 'rb'))
+model = pickle.load(open('../models/ranfor_classifier_nestimators-60_42.sav', 'rb'))
 
 @app.route("/", methods=["GET", "POST"])
 def home():
