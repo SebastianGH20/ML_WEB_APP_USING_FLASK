@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
@@ -5,7 +6,9 @@ import pandas as pd
 app = Flask(__name__)
 
 # Cargar el modelo
-model = pickle.load(open('../models/ranfor_classifier_nestimators-60_42.sav', 'rb'))
+model_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'ranfor_classifier_nestimators-60_42.sav')
+model = pickle.load(open(model_path, 'rb'))
+#model = pickle.load(open('../models/ranfor_classifier_nestimators-60_42.sav', 'rb'))
 
 @app.route("/", methods=["GET", "POST"])
 def home():
